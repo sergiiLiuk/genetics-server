@@ -8,7 +8,6 @@ const app = express();
 
 
 const birthRecordSchema = require('./graphql/index').birthRecordSchema; 
-// const graphqlSchema = require("./schemas/index")
 
 const port = process.env.PORT // 5000
 
@@ -18,7 +17,7 @@ app.use(express.json());
  
 app.listen(port, async () => {
      console.log(`server is running on port: ${port}`)
-     await Mongoose.connect(process.env.DATABASE_URL, { 
+     await Mongoose.connect(process.env.DATABASE_URL_DEV, { 
          useNewUrlParser: true,
          useUnifiedTopology: true
     });
