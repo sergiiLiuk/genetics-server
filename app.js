@@ -17,7 +17,7 @@ app.use(express.json());
  
 app.listen(port, async () => {
      console.log(`server is running on port: ${port}`)
-     await Mongoose.connect(process.env.DATABASE_URL_PROD, { 
+     await Mongoose.connect('mongodb+srv://sergiiliuk:FmEMKYfzobyYGxcw@genetics.5xdnb.mongodb.net/geneticsDB', { 
          useNewUrlParser: true,
          useUnifiedTopology: true
     });
