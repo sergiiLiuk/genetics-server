@@ -17,7 +17,8 @@ app.use(express.json());
  
 app.listen(port, async () => {
      console.log(`server is running on port: ${port}`)
-     await Mongoose.connect('mongodb+srv://sergiiliuk:FmEMKYfzobyYGxcw@genetics-shard-00-01.5xdnb.mongodb.net/geneticsDB', { 
+     let url = 'mongodb://sergiiliuk:FmEMKYfzobyYGxcw@genetics-shard-00-00.5xdnb.mongodb.net:27017,genetics-shard-00-01.5xdnb.mongodb.net:27017,genetics-shard-00-02.5xdnb.mongodb.net:27017/geneticsDB?ssl=true&replicaSet=atlas-icfrhv-shard-0&authSource=admin&retryWrites=true&w=majority'
+     await Mongoose.connect(url, { 
          useNewUrlParser: true,
          useUnifiedTopology: true
     });
