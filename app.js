@@ -17,7 +17,7 @@ app.use(express.json());
  
 app.listen(port, async () => {
      console.log(`server is running on port: ${port}`)
-     await Mongoose.connect(process.env.DATABASE_URL_DEV, { 
+     await Mongoose.connect(process.env.DATABASE_URL_PROD, { 
          useNewUrlParser: true,
          useUnifiedTopology: true
     });
@@ -28,18 +28,17 @@ db.on('error', console.error.bind(console, "MongoDB connection error:"))
 db.once('open', ( ) => console.log("Connected to database"))
 
 
-
-app.use("/api", graphqlHTTP({
-        schema: birthRecordSchema,
-        rootValue: global,
-        graphiql: true
-    }) 
-);
-
 // handle production
 if(process.env.NODE_ENV === 'production'){
     // static folder
     app.use(express.static(__dirname + '/public/'));
     // handle SPA
     app.get(/.*/, (res, req) => res.sendFile(__dirname + '/public/index.html'));
+} else {
+    app.use("/api", graphqlHTTP({
+        schema: birthRecordSchema,
+        rootValue: global,
+        graphiql: true
+    }) 
+);
 }
