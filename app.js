@@ -30,7 +30,6 @@ db.once('open', ( ) => console.log("Connected to database"))
 
 // handle production
 if(process.env.NODE_ENV === 'production'){
-    console.log('HEre')
     // static folder
     app.use(express.static(__dirname + '/public/'));
     // handle SPA
