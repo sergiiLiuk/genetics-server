@@ -26,7 +26,12 @@ app.listen(port, async () => {
 const db = Mongoose.connection
 db.on('error', console.error.bind(console, "MongoDB connection error:"))
 db.once('open', ( ) => console.log("Connected to database"))
-
+app.use("/api", graphqlHTTP({
+    schema: birthRecordSchema,
+    rootValue: global,
+    graphiql: true
+}) 
+);
 
 // handle production
 if(process.env.NODE_ENV === 'production'){
@@ -34,11 +39,4 @@ if(process.env.NODE_ENV === 'production'){
     app.use(express.static(__dirname + '/public/'));
     // handle SPA
     app.get(/.*/, (res, req) => res.sendFile(__dirname + '/public/index.html'));
-} else {
-    app.use("/api", graphqlHTTP({
-        schema: birthRecordSchema,
-        rootValue: global,
-        graphiql: true
-    }) 
-);
-}
+}  
