@@ -3,8 +3,8 @@ const GraphQLNonNull = require('graphql').GraphQLNonNull;
 const GraphQLID = require('graphql').GraphQLID;
 const GraphQLString = require('graphql').GraphQLString;
 
-exports.birthRecordType = new GraphQLObjectType({
-    name: 'BirthRecord',
+exports.deathRecordType = new GraphQLObjectType({
+    name: 'DeathRecord',
     fields: () => ({
         id: { type: GraphQLID },
         firstName: {type: GraphQLString},

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const BirthRecordSchema = new Schema({
+const DeathRecordSchema = new Schema({
     firstName: String,
     secondName: String,
     lastName: String,
@@ -17,6 +17,6 @@ const BirthRecordSchema = new Schema({
     motherLastname: String
 });
  
-const Model = mongoose.model( "BirthRecord", BirthRecordSchema, 'birthRecords' )
+const Model = mongoose.model( "DeathRecord", DeathRecordSchema, 'deathRecords' )
 module.exports = Model;
  

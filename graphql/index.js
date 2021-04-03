@@ -1,12 +1,14 @@
 const GraphQLSchema = require('graphql').GraphQLSchema;
 // const GraphQLObjectType = require('graphql').GraphQLObjectType;
-const queryType = require('./queries/birth').queryType;
+const query = require('./query').queryType;
 // const mutation = require('./mutations/index');
  
-exports.birthRecordSchema = new GraphQLSchema({
-  query: queryType,
+exports.querySchema = new GraphQLSchema({
+  query: query,
 //   mutation: new GraphQLObjectType({
 //     name: 'Mutation',
 //     fields: mutation
 //   })
 })
+
+ 

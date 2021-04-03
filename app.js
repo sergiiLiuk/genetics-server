@@ -7,7 +7,7 @@ const Mongoose = require('mongoose');
 const app = express();
 
 
-const birthRecordSchema = require('./graphql/index').birthRecordSchema; 
+const querySchema = require('./graphql/index').querySchema; 
 
 const port = process.env.PORT // 5000
 
@@ -28,7 +28,7 @@ const db = Mongoose.connection
 db.on('error', console.error.bind(console, "MongoDB connection error:"))
 db.once('open', ( ) => console.log("Connected to database"))
 app.use("/api", graphqlHTTP({
-    schema: birthRecordSchema,
+    schema: querySchema,
     rootValue: global,
     graphiql: true
 }) 
