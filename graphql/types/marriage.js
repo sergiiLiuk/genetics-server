@@ -22,8 +22,8 @@ exports.marriageRecordType = new GraphQLObjectType({
         husbandMotherName: {type: GraphQLString},
         husbandMotherLastname: {type: GraphQLString},
         wifeFatherName: {type: GraphQLString},
-        husbandMotherName: {type: GraphQLString},
-        husbandMotherLastname: {type: GraphQLString},
+        wifeMotherName: {type: GraphQLString},
+        wifeMotherLastname: {type: GraphQLString},
         parish: {type: GraphQLString}   
     })
   });

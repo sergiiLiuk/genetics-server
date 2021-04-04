@@ -18,8 +18,8 @@ const MarriageRecordSchema = new Schema({
     husbandMotherName: String,
     husbandMotherLastname: String,
     wifeFatherName: String,
-    husbandMotherName: String,
-    husbandMotherLastname: String,
+    wifeMotherName: String,
+    wifeMotherLastname: String,
     parish: String
     
 });
