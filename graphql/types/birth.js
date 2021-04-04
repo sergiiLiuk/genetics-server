@@ -7,9 +7,10 @@ exports.birthRecordType = new GraphQLObjectType({
     name: 'BirthRecord',
     fields: () => ({
         id: { type: GraphQLID },
-        firstName: {type: GraphQLString},
+        firstName: {type: GraphQLString},        
         secondName: {type: GraphQLString}, 
         lastName: {type: GraphQLString},   
+        year: {type: GraphQLString},
         actNumber: {type: GraphQLString},   
         sex: {type: GraphQLString},
         locality: {type: GraphQLString},

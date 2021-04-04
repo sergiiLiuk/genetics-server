@@ -6,6 +6,7 @@ const DeathRecordSchema = new Schema({
     secondName: String,
     lastName: String,
     actNumber: String,
+    year: String,
     sex: String,
     locality: String,
     birthday: String,
@@ -17,6 +18,6 @@ const DeathRecordSchema = new Schema({
     motherLastname: String
 });
  
-const Model = mongoose.model( "DeathRecord", DeathRecordSchema, 'deathRecords' )
+const Model = mongoose.model( "DeathRecord", DeathRecordSchema, 'death' )
 module.exports = Model;
  

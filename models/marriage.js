@@ -9,7 +9,7 @@ const MarriageRecordSchema = new Schema({
     wifeSecondName: String,
     wifeLastName: String,
     actNumber: String,
-    sex: String,
+    year: String,
     locality: String,
     marriageDate: String,
     photo: String,
@@ -24,6 +24,6 @@ const MarriageRecordSchema = new Schema({
     
 });
  
-const Model = mongoose.model( "MarriageRecord", MarriageRecordSchema, 'MarriageRecords' )
+const Model = mongoose.model( "MarriageRecord", MarriageRecordSchema, 'marriage' )
 module.exports = Model;
  

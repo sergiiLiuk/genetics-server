@@ -13,6 +13,7 @@ exports.marriageRecordType = new GraphQLObjectType({
         wifeFirstName: {type: GraphQLString},
         wifeSecondName: {type: GraphQLString},
         wifeLastName: {type: GraphQLString},
+        year: {type: GraphQLString},
         actNumber: {type: GraphQLString},   
         locality: {type: GraphQLString},
         marriageDate: {type: GraphQLString},

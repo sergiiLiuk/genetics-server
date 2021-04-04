@@ -18,6 +18,6 @@ const BirthRecordSchema = new Schema({
     motherLastname: String
 });
  
-const Model = mongoose.model( "BirthRecord", BirthRecordSchema, 'birthRecords' )
+const Model = mongoose.model( "BirthRecord", BirthRecordSchema, 'birth' )
 module.exports = Model;
  

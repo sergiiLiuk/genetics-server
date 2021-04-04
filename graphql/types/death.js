@@ -10,6 +10,7 @@ exports.deathRecordType = new GraphQLObjectType({
         firstName: {type: GraphQLString},
         secondName: {type: GraphQLString}, 
         lastName: {type: GraphQLString},   
+        year: {type: GraphQLString},
         actNumber: {type: GraphQLString},   
         sex: {type: GraphQLString},
         locality: {type: GraphQLString},
