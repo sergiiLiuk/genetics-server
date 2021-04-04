@@ -6,6 +6,7 @@ const BirthRecordSchema = new Schema({
     secondName: String,
     lastName: String,
     actNumber: String,
+    year: String,
     sex: String,
     locality: String,
     birthday: String,
