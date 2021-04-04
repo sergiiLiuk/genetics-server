@@ -38,6 +38,7 @@ app.use("/api", graphqlHTTP({
 if(process.env.NODE_ENV === 'production'){
     // static folder
     app.use(express.static(__dirname + '/public/'));
+    console.log('AAA')
     // handle SPA
     app.get(/.*/, (res, req) => res.sendFile(__dirname + '/public/index.html'));
 }  
