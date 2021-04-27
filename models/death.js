@@ -9,7 +9,7 @@ const DeathRecordSchema = new Schema({
     year: String,
     sex: String,
     locality: String,
-    birthday: String,
+    deathDate: String,
     photo: String,
     note: String,
     fatherName: String,
